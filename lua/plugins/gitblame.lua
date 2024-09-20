@@ -3,8 +3,8 @@ return {
   event = "VeryLazy",
   opts = {
     enabled = true,
-    message_template = "          <summary> • <date> • <author> • <<sha>>",
+    message_template = "<summary> • <date> • <author> • <<sha>>",
     date_format = "%m-%d-%Y",
-    virtual_text_column = 1,
+    virtual_text_column = 80,
   },
 }
