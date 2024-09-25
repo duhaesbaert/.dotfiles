@@ -1,5 +1,6 @@
 local telescope = require("telescope.builtin")
 
+-- Live Grep options
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>F",
@@ -7,6 +8,8 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true, desc = "Grep (Root Dir)" }
 )
 
+-- GitBlame options
+-- More actions here: https://github.com/f-person/git-blame.nvim?tab=readme-ov-file#commands
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>go",
@@ -14,6 +17,8 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true, desc = "Open GitBlame URL" }
 )
 
+-- Copilot Chat options
+-- More actions here: https://github.com/CopilotC-Nvim/CopilotChat.nvim
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>cco",
