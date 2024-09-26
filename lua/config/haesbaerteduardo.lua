@@ -28,9 +28,6 @@ require("lazy").setup({
     rtp = {
       disabled_plugins = {
         "gzip",
-        -- "matchit",
-        -- "matchparen",
-        -- "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",
@@ -50,3 +47,29 @@ require("copilot").setup({
     go = true,
   },
 })
+
+require("rose-pine").setup({
+  disable_background = true,
+})
+
+function ColorMyPencils(color)
+  color = color or "rose-pine"
+  vim.cmd.colorscheme(color)
+
+  -- Remove background color
+  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+  vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+  vim.api.nvim_set_hl(0, "CursorLine", { bg = "none" })
+  vim.api.nvim_set_hl(0, "CursorColumn", { bg = "none" })
+
+  -- Additional highlight groups
+  vim.api.nvim_set_hl(0, "Pmenu", { bg = "none" })
+  vim.api.nvim_set_hl(0, "PmenuSel", { bg = "none" })
+  vim.api.nvim_set_hl(0, "PmenuSbar", { bg = "none" })
+  vim.api.nvim_set_hl(0, "PmenuThumb", { bg = "none" })
+  vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
+  vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "none" })
+end
+
+ColorMyPencils()
