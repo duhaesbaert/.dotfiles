@@ -43,7 +43,6 @@ vim.api.nvim_set_keymap(
 )
 
 -- DAP options
---[[
 local dap = require("dap")
 
 vim.api.nvim_set_keymap("n", "<Leader>D", "", { noremap = true, silent = true, desc = "Debugger" })
@@ -84,5 +83,3 @@ vim.api.nvim_set_keymap(
   '<cmd>lua require("dap").step_out()<CR>',
   { noremap = true, silent = true, desc = "Continue" }
 )
-]]
---
