@@ -47,39 +47,39 @@ local dap = require("dap")
 
 vim.api.nvim_set_keymap("n", "<Leader>D", "", { noremap = true, silent = true, desc = "Debugger" })
 
-vim.api.nvim_set_keymap(
-  "n",
-  "<Leader>Db",
-  '<cmd>lua require("dap").toggle_breakpoint()<CR>',
-  { noremap = true, silent = true, desc = "Toggle Breakpoint" }
-)
-
 vim.api.nvim_set_keymap("n", "<Leader>Ds", "", { noremap = true, silent = true, desc = "Debugger Commands" })
 
 vim.api.nvim_set_keymap(
   "n",
-  "<Leader>Dsc",
+  "<Leader>dsb",
+  '<cmd>lua require("dap").toggle_breakpoint()<CR>',
+  { noremap = true, silent = true, desc = "Toggle Breakpoint" }
+)
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>dsc",
   '<cmd>lua require("dap").continue()<CR>',
   { noremap = true, silent = true, desc = "Continue" }
 )
 
 vim.api.nvim_set_keymap(
   "n",
-  "<Leader>Dsu",
+  "<Leader>dsu",
   '<cmd>lua require("dap").step_over()<CR>',
   { noremap = true, silent = true, desc = "Continue" }
 )
 
 vim.api.nvim_set_keymap(
   "n",
-  "<Leader>Dsi",
+  "<Leader>dsi",
   '<cmd>lua require("dap").step_into()<CR>',
   { noremap = true, silent = true, desc = "Continue" }
 )
 
 vim.api.nvim_set_keymap(
   "n",
-  "<Leader>Dso",
+  "<Leader>dso",
   '<cmd>lua require("dap").step_out()<CR>',
   { noremap = true, silent = true, desc = "Continue" }
 )
