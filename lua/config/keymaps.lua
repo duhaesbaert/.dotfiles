@@ -45,9 +45,9 @@ vim.api.nvim_set_keymap(
 -- DAP options
 local dap = require("dap")
 
-vim.api.nvim_set_keymap("n", "<Leader>D", "", { noremap = true, silent = true, desc = "Debugger" })
+vim.api.nvim_set_keymap("n", "<Leader>d", "", { noremap = true, silent = true, desc = "Debugger" })
 
-vim.api.nvim_set_keymap("n", "<Leader>Ds", "", { noremap = true, silent = true, desc = "Debugger Commands" })
+vim.api.nvim_set_keymap("n", "<Leader>ds", "", { noremap = true, silent = true, desc = "Debugger Commands" })
 
 vim.api.nvim_set_keymap(
   "n",
