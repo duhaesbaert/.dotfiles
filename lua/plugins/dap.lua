@@ -1,3 +1,5 @@
+-- More debugger instalation instructions
+-- https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#vscode-js-debug
 return {
   "mfussenegger/nvim-dap",
   dependencies = {
