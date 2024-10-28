@@ -5,6 +5,6 @@ return {
     enabled = true,
     message_template = "<summary> • <date> • <author> • <<sha>>",
     date_format = "%m-%d-%Y",
-    virtual_text_column = 120,
+    virtual_text_column = 160,
   },
 }
