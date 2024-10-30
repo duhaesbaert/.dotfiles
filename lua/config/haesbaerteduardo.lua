@@ -73,3 +73,5 @@ function ColorMyPencils(color)
 end
 
 ColorMyPencils()
+
+vim.lsp.handlers["textDocument/inlayHint"] = function() end
