@@ -45,6 +45,7 @@ require("copilot").setup({
     java = true,
     kotlin = true,
     go = true,
+    python = true,
   },
 })
 
