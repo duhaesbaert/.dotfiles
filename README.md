@@ -13,7 +13,7 @@ This contain some different configuration for my work environment.
 
 Clone this repository into your .config/nvim folder:
 ```
-git clone https://github.com/haesbaerteduardo/.dotfiles ~/.config/nvim
+git clone https://github.com/duhaesbaert/.dotfiles ~/.config/nvim
 ```
 
 If you wish to save the current state of your vim configuration, clone/backup the following:
