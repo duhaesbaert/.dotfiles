@@ -74,3 +74,18 @@ end
 ColorMyPencils()
 
 vim.lsp.handlers["textDocument/inlayHint"] = function() end
+
+local lspconfig = require("lspconfig")
+
+lspconfig.jdtls.setup({
+  cmd = { "jdtls" },
+  root_dir = function(fname)
+    return lspconfig.util.root_pattern(".git", "pom.xml", "build.gradle")(fname) or vim.fn.getcwd()
+  end,
+  settings = {
+    java = {
+      signatureHelp = { enabled = true },
+      contentProvider = { preferred = "fernflower" },
+    },
+  },
+})
