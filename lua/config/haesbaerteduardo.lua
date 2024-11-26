@@ -71,21 +71,33 @@ function ColorMyPencils(color)
   vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "none" })
 end
 
+function DontIdent()
+  --[[
+  vim.opt.autoindent = false
+  vim.opt.smartindent = false
+  vim.opt.cindent = false
+  vim.opt.copyindent = false
+  vim.opt.preserveindent = false
+  vim.opt.breakindent = false
+  vim.opt.expandtab = false
+
+  vim.cmd("filetype indent off")
+  vim.lsp.buf.formatting_sync(nil, 1000)
+  ]]
+
+  vim.cmd([[
+    command! NoAutoSave noa w
+    NoAutoSave
+  ]])
+end
+
+vim.cmd([[
+  augroup ProjectLocalConfig
+    autocmd!
+    autocmd BufWriteCmd $REPOSIGINT* lua DontIdent()
+  augroup END
+]])
+
 ColorMyPencils()
 
 vim.lsp.handlers["textDocument/inlayHint"] = function() end
-
-local lspconfig = require("lspconfig")
-
-lspconfig.jdtls.setup({
-  cmd = { "jdtls" },
-  root_dir = function(fname)
-    return lspconfig.util.root_pattern(".git", "pom.xml", "build.gradle")(fname) or vim.fn.getcwd()
-  end,
-  settings = {
-    java = {
-      signatureHelp = { enabled = true },
-      contentProvider = { preferred = "fernflower" },
-    },
-  },
-})
