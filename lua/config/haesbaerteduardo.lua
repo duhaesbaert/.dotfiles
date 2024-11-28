@@ -34,6 +34,7 @@ require("lazy").setup({
       },
     },
   },
+  ui = { dashboard = false },
 })
 
 require("copilot").setup({
@@ -72,19 +73,6 @@ function ColorMyPencils(color)
 end
 
 function DontIdent()
-  --[[
-  vim.opt.autoindent = false
-  vim.opt.smartindent = false
-  vim.opt.cindent = false
-  vim.opt.copyindent = false
-  vim.opt.preserveindent = false
-  vim.opt.breakindent = false
-  vim.opt.expandtab = false
-
-  vim.cmd("filetype indent off")
-  vim.lsp.buf.formatting_sync(nil, 1000)
-  ]]
-
   vim.cmd([[
     command! NoAutoSave noa w
     NoAutoSave
