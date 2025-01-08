@@ -86,6 +86,13 @@ vim.cmd([[
   augroup END
 ]])
 
+vim.cmd([[
+  augroup ProjectLocalConfig
+    autocmd!
+    autocmd BufWriteCmd $REPOAPPTIO* lua DontIdent()
+  augroup END
+]])
+
 ColorMyPencils()
 
 vim.lsp.handlers["textDocument/inlayHint"] = function() end
