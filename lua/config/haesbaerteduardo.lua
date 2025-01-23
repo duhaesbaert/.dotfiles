@@ -96,3 +96,15 @@ vim.cmd([[
 ColorMyPencils()
 
 vim.lsp.handlers["textDocument/inlayHint"] = function() end
+
+local orig_notify = vim.notify
+vim.notify = function(msg, level, opts)
+  if msg:match("validating document") then
+    return
+  end
+  orig_notify(msg, level, opts)
+end
+
+vim.lsp.handlers["window/showMessage"] = function() end
+vim.lsp.handlers["window/progress"] = function() end
+vim.lsp.handlers["$/progress"] = function() end
