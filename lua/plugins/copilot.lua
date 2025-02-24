@@ -106,9 +106,7 @@ return {
                 providers = {
                   copilot = { name = "copilot", module = "blink-cmp-copilot" },
                 },
-                completion = {
-                  enabled_providers = { "copilot" },
-                },
+                default = { "copilot" },
               },
             },
           },
