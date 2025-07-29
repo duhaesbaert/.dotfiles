@@ -72,6 +72,8 @@ function ColorMyPencils(color)
   vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "none" })
 end
 
+vim.lsp.enable("kotlin_lsp")
+
 function DontIdent()
   vim.cmd([[
     command! NoAutoSave noa w
