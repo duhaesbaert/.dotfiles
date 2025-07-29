@@ -1,5 +1,4 @@
---[[
-return {
+--[[return {
   "neovim/nvim-lspconfig",
   opts = function(_, opts)
     opts.servers = opts.servers or {}
@@ -10,8 +9,8 @@ return {
       end,
     }
   end,
-}
-]]
+}]]
+
 return {
   {
     "neovim/nvim-lspconfig",
@@ -69,7 +68,7 @@ return {
 
               local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
               -- vim.lsp.set_log_level('DEBUG')
-              local workspace_dir = "/home/jake/.workspace/" .. project_name -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
+              local workspace_dir = "/home/I864393/.workspace/" .. project_name -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
               local config = {
                 cmd = {
 
