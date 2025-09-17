@@ -8,7 +8,7 @@ return {
     },
     build = "make tiktoken",
     opts = {
-      model = "gpt-4",
+      model = "claude-sonnet-4",
     },
   },
 }
