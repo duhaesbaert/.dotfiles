@@ -28,7 +28,7 @@ vim.api.nvim_set_keymap(
 
 -- GitBlame options
 -- More actions here: https://github.com/f-person/git-blame.nvim?tab=readme-ov-file#commands
-vim.api.nvim_set_keymap("n", "<Leader>co", "", { noremap = true, silent = true, desc = "Github Copilot" })
+vim.api.nvim_set_keymap("n", "<Leader>co", "", { noremap = true, silent = true, desc = "AI Options" })
 
 vim.api.nvim_set_keymap(
   "n",
@@ -41,21 +41,21 @@ vim.api.nvim_set_keymap(
 -- More actions here: https://github.com/CopilotC-Nvim/CopilotChat.nvim
 vim.api.nvim_set_keymap(
   "n",
-  "<Leader>coo",
+  "<Leader>coO",
   "<cmd>CopilotChatOpen<CR>",
   { noremap = true, silent = true, desc = "Copilot Open" }
 )
 
 vim.api.nvim_set_keymap(
   "n",
-  "<Leader>cor",
+  "<Leader>coR",
   "<cmd>CopilotChatReset<CR>",
   { noremap = true, silent = true, desc = "Copilot Reset" }
 )
 
 vim.api.nvim_set_keymap(
   "n",
-  "<Leader>coc",
+  "<Leader>coC",
   "<cmd>CopilotChatClose<CR>",
   { noremap = true, silent = true, desc = "Copilot Close" }
 )
