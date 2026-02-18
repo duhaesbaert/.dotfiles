@@ -37,6 +37,7 @@ require("lazy").setup({
   ui = { dashboard = false },
 })
 
+--[[
 require("copilot").setup({
   filetypes = {
     ["*"] = false,
@@ -47,6 +48,7 @@ require("copilot").setup({
     go = true,
   },
 })
+--]]
 
 require("rose-pine").setup({
   disable_background = true,
