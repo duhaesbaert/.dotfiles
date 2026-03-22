@@ -7,6 +7,9 @@ This contain some different configuration for my work environment.
 ### Pre-requisites
 
 - Install [ripgrep](https://github.com/BurntSushi/ripgrep)
+  - `sudo apt/brew install ripgrep`
+- Install [LuaRocks](https://github.com/luarocks/luarocks)
+  - `sudo apt/brew install luarocks` 
 - And, of course, have neovim installed.
 
 ### Usage
