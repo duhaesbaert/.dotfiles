@@ -28,8 +28,6 @@ vim.api.nvim_set_keymap(
 
 -- GitBlame options
 -- More actions here: https://github.com/f-person/git-blame.nvim?tab=readme-ov-file#commands
-vim.api.nvim_set_keymap("n", "<Leader>co", "", { noremap = true, silent = true, desc = "AI Options" })
-
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>go",
@@ -37,25 +35,27 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true, desc = "Open GitBlame URL" }
 )
 
--- Copilot Chat options
--- More actions here: https://github.com/CopilotC-Nvim/CopilotChat.nvim
+vim.api.nvim_set_keymap("n", "<Leader>co", "", { noremap = true, silent = true, desc = "Claude" })
+
+vim.api.nvim_set_keymap("n", "<Leader>coo", "<cmd>ClaudeCode<CR>", { noremap = true, silent = true, desc = "Open" })
+
 vim.api.nvim_set_keymap(
   "n",
-  "<Leader>coO",
-  "<cmd>CopilotChatOpen<CR>",
-  { noremap = true, silent = true, desc = "Copilot Open" }
+  "<Leader>cof",
+  "<cmd>ClaudeCodeFocus<CR>",
+  { noremap = true, silent = true, desc = "Focus" }
 )
 
 vim.api.nvim_set_keymap(
   "n",
-  "<Leader>coR",
-  "<cmd>CopilotChatReset<CR>",
-  { noremap = true, silent = true, desc = "Copilot Reset" }
+  "<Leader>com",
+  "<cmd>ClaudeCodeSelectModel<CR>",
+  { noremap = true, silent = true, desc = "Model" }
 )
 
 vim.api.nvim_set_keymap(
   "n",
-  "<Leader>coC",
-  "<cmd>CopilotChatClose<CR>",
-  { noremap = true, silent = true, desc = "Copilot Close" }
+  "<Leader>cos",
+  "<cmd>ClaudeCodeSend<CR>",
+  { noremap = true, silent = true, desc = "Close" }
 )
