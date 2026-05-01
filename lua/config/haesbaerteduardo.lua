@@ -74,6 +74,18 @@ function ColorMyPencils(color)
   vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "none" })
 end
 
+vim.lsp.config("kotlin_lsp", {
+  cmd = { "kotlin-lsp", "--stdio" },
+  root_markers = {
+    "settings.gradle",
+    "settings.gradle.kts",
+    "pom.xml",
+    "build.gradle",
+    "build.gradle.kts",
+    "workspace.json",
+  },
+})
+
 vim.lsp.enable("kotlin_lsp")
 
 function DontIdent()
@@ -98,8 +110,6 @@ vim.cmd([[
 ]])
 
 ColorMyPencils()
-
-vim.lsp.handlers["textDocument/inlayHint"] = function() end
 
 local orig_notify = vim.notify
 vim.notify = function(msg, level, opts)
