@@ -74,19 +74,8 @@ function ColorMyPencils(color)
   vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "none" })
 end
 
-vim.lsp.config("kotlin_lsp", {
-  cmd = { "kotlin-lsp", "--stdio" },
-  root_markers = {
-    "settings.gradle",
-    "settings.gradle.kts",
-    "pom.xml",
-    "build.gradle",
-    "build.gradle.kts",
-    "workspace.json",
-  },
-})
-
-vim.lsp.enable("kotlin_lsp")
+-- kotlin_lsp is now configured in lua/plugins/lsp/kotlin.lua so it loads
+-- after nvim-lspconfig/LazyVim are ready (fixes autostart/load-order).
 
 function DontIdent()
   vim.cmd([[
